@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <title>Apuya's Intro to Anime</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/soundjs.min.js"></script>
+    <script src="js/velocity.js"></script>
+    <script src="js/velocity.ui.js"></script>
+    <script src="js/custom.js"></script>
+
+    <!-- Media query for narrow browser width -->
+    <link
+      rel="stylesheet"
+      media="only screen and (max-width: 480px)"
+      href="css/mobile.css"
+    />
+    <!-- Media query for medium browser width -->
+    <link
+      rel="stylesheet"
+      media="only screen and (min-width: 481px) and (max-width: 960px)"
+      href="css/tablet.css"
+    />
+    <!-- Media query for full browser width -->
+    <link
+      rel="stylesheet"
+      media="only screen and (min-width: 961px)"
+      href="css/desktop.css"
+    />
+    <!-- Prevent smartphones from scaling pages down -->
+    <meta name="viewport" content="initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="header">
+        <a href="index.html"><img src="assets/logo.png" alt="Home Logo (Mahouka)" /></a>
+        <h1>Anime 101</h1>
+      </div>
+
+      <div id="main_area">
+        <div id="index_title_text">
+          <h1>Welcome to your home base for learning about anime!</h1>
+        </div>
+        <p>
+          Anime (Japanese: アニメ) is hand-drawn and computer animation
+          originating from Japan. Anime, a term derived from the English word
+          animation, is used in Japanese to describe all animation, regardless
+          of style or origin. Outside of Japan, anime can refer either to
+          animated works produced in Japan, or to their common visual style,
+          which has since been adopted by a minority of works produced in other
+          countries.
+        </p>
+
+        <div>
+          <button id="fun_button" type="button">
+            Magic Button
+          </button>
+        </div>
+
+        <div id="index_big_text">
+          <h2>Click the buttons below to learn more!</h2>
+        </div>
+        <div id="main_sub_area">
+          <a href="start.html"
+            ><div class="thumb">
+              <img src="assets/dango.png" alt="Dango Button - Start" />
+              Start
+            </div></a
+          >
+          <a href="studios.html">
+            <div class="thumb">
+              <img src="assets/totoro.png" alt="Totoro Button - Studios" />
+              Studios
+            </div></a
+          >
+          <a href="lexicon.html">
+            <div class="thumb">
+              <img
+                src="assets/death_note.png"
+                alt="Death Note Button - Terminology"
+              />
+              Terminology
+            </div></a
+          >
+          <a href="japan.html"
+            ><div class="thumb">
+              <img src="assets/japan.png" alt="Japan Button - Japan" />
+              Japan
+            </div></a
+          >
+        </div>
+      </div>
+      
+      <div id="index_subarea_text">
+        <h1>Featured Content</h1>
+      </div>
+
+      <div id="sub_area">
+        <a href="https://anilist.co/character/251/Haruhi-Suzumiya">
+          <div class="big-thumb">
+            <h5>Featured Character</h5>
+            <img src="assets/haruhi.png" alt="Haruhi" />
+            Haruhi Suzumiya
+          </div></a
+        >
+        <a href="https://anilist.co/anime/97903/Sakura-Quest/">
+          <div class="big-thumb">
+            <h5>Featured Anime</h5>
+            <img src="assets/sakura.jpg" alt="Sakura Quest" />
+            Sakura Quest
+          </div></a
+        >
+        <a href="https://anilist.co/manga/85849/ReLife/">
+          <div class="big-thumb">
+            <h5>Featured Manga</h5>
+            <img src="assets/ReLife.jpg" alt="ReLife" />
+            ReLife
+          </div></a
+        >
+      </div>
+    </div>
+  </body>
+</html>

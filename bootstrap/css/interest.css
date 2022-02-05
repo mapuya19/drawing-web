@@ -1,0 +1,59 @@
+#wrap {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+header {
+    border: solid 1px white;
+    display: flex;
+}
+
+#right_of_logo {
+    border: solid 1px red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200vh;
+}
+
+#logo {
+    border: solid 1px white;
+    height: 13vh;
+    width: 13vh;
+}
+
+#username {
+    margin-top: 10vh;
+    border: solid 1px white;
+    margin-left: 2vh;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10vh;
+    margin-right: 2vh;
+    position: relative;
+}
+
+#main_area {
+    border: solid 1px white;
+    height: 50vh;
+}
+
+#sub_area {
+    border: solid 1px white;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.thumb {
+    border: solid 1px white;
+    width: 25vh;
+    height: 25vh;
+    margin-top: 2vh;
+    margin: 1vh;
+}
