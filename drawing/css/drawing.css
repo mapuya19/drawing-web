@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vertical-menu {
+  display: flex;
+  margin: 0px auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vertical-menu a {
+  display: flex;
+  justify-content: center;
+  background-color: #eee;
+  color: black;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #04aa6d;
+  color: white;
+}
