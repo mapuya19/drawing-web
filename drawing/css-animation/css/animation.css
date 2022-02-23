@@ -1,0 +1,114 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: #0b5561;
+}
+
+svg {
+  width: 500px;
+}
+
+circle {
+  fill: #fff;
+  animation: flame 2s ease-out infinite;
+}
+
+.container {
+  perspective: 1500px;
+  perspective-origin: 50% 50%;
+}
+
+.face {
+  position: absolute;
+  width: 175px;
+  height: 100px;
+}
+
+.face:nth-child(2) {
+  transform: rotate(60deg);
+}
+
+.face:nth-child(3) {
+  transform: rotate(120deg);
+}
+
+.side {
+  position: absolute;
+}
+
+.top {
+  transform: translateZ(87px);
+}
+
+.bottom {
+  transform: rotateZ(60deg) rotateX(180deg) translateZ(87px);
+}
+
+.side:nth-child(1) {
+  transform: rotateY(-90deg) translateZ(87px);
+}
+
+.side:nth-child(2) {
+  transform: rotateY(-90deg) rotateX(60deg) translateZ(87px);
+}
+
+.side:nth-child(3) {
+  transform: rotateZ(180deg) rotateY(-90deg) rotateX(-60deg) translateZ(87px);
+}
+
+.side:nth-child(4) {
+  transform: rotateZ(180deg) rotateY(-90deg) translateZ(87px);
+}
+
+.side:nth-child(5) {
+  transform: rotateZ(180deg) rotateY(-90deg) rotateX(60deg) translateZ(87px);
+}
+
+.side:nth-child(6) {
+  transform: rotateY(-90deg) rotateX(-60deg) translateZ(87px);
+}
+
+.hexagone {
+  transition-property: transform;
+  transition-duration: 10s;
+}
+
+.hexagone:active {
+  transform: rotateX(720deg) rotateY(360deg);
+}
+
+#ci2 {
+  animation-delay: -0.5s;
+}
+
+#ci3 {
+  animation-delay: -1s;
+}
+
+#ci4 {
+  animation-delay: -1.5s;
+}
+
+#ci5 {
+  animation-delay: -2s;
+}
+
+#ci6 {
+  animation-delay: -2.5s;
+}
+
+@keyframes flame {
+  from {
+    r: 1px;
+    opacity: 0.8;
+  }
+  to {
+    r: 28px;
+    opacity: 0;
+  }
+}
