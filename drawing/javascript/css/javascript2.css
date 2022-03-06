@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  
+    background-color: #BEE2FF;
+    text-align: center;
+    height: 100vh;
+  }
+  
+  h1 {
+    color: white;
+    font-family: "Trebuchet MS";
+    font-size: 5vh;
+    margin: 0;
+  }
+  
+  h3 {
+    color: white;
+    font-family: "Trebuchet MS";
+    font-size: 3vh;
+    margin: 0 0 25px 0;
+  }
+  
+  h4 {
+    color: white;
+    font-family: "Trebuchet MS";
+    font-size: 1vh;
+    margin: 0 0 50px 0;
+  }
+  
+  svg {
+    flex: 0 0 33.33%;
+    height: 15vh;
+    width: 65vw;
+    fill: #ffffff;
+  }
+  
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .child {
+    flex: 0 0 33.33%;
+    flex-direction: column;
+  }
+  
