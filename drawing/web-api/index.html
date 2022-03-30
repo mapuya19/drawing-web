@@ -8,12 +8,17 @@
     <div class="container">
       <div class="item">
         <p>
-          <a href="https://openweathermap.org/api">OpenWeatherMap</a>
-          is an API that provides accurate weather data. In this case, I am
-          utilizing the One Call API endpoint to access visibility, which
-          affects the blurriness of the text description required by the
-          assignment. Additionally, the gradient background changes depending on
-          the temperature.
+          <a href="https://openweathermap.org/api">OpenWeatherMap</a> is an API
+          that provides accurate weather data, similar to the example presented
+          in class. In this case, however, I am utilizing the One Call API
+          endpoint to access cloudiness of the current location, which affects
+          the blurriness of the text below. The more cloudy it is, the blurrier
+          the text is. Sometimes there is no visible change since cloudiness %
+          varies quite a bit. Thus, a second layer of visual change was added,
+          where the linear gradient background changes depending on the
+          temperature where the website was accessed from. Other APIs were
+          considered, but often required OAuth which was a bit out of the scope
+          of this project.
         </p>
         <p id="change-me">This is how visible it is outside.</p>
         <span id="direction">Attempting to access . . . </span>
