@@ -24,9 +24,11 @@ form.addEventListener("submit", (event) => {
 
 accessData = async (text) => {
   let encodedText = encodeURIComponent(text.trim());
-  console.log(encodedText);
+  // console.log(encodedText);
 
-  let url = "https://api.funtranslations.com/translate/shakespeare.json?text=" + encodedText;
+  let url =
+    "https://api.funtranslations.com/translate/shakespeare.json?text=" +
+    encodedText;
 
   let response = await fetch(url);
 
@@ -38,9 +40,30 @@ accessData = async (text) => {
   }
 };
 
+function countWords(str) {
+  const arr = str.split(" ");
+
+  return arr.filter((word) => word !== "").length;
+}
+
 transformText = (response) => {
   let translated = response.contents.translated;
-  console.log(translated);
-
   document.querySelector("#change-me").textContent = translated;
+
+  let counted = Math.abs(50 - countWords(translated));
+  let newStyle =
+    "linear-gradient(" + counted + "deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)";
+  document.querySelector("body").style.background = newStyle;
+  document.querySelector("body").style.backgroundSize = "400% 400%";
+  document.querySelector("body").style.animation =
+    "gradient 15s ease infinite;";
+  document.querySelector("body").style.height = "100vh;";
+  document.querySelector("body").style.fontFamily =
+    "font-family: 'Roboto', sans-serif;";
+  document.querySelector("body").style.color = "white";
+  // console.log(
+  //   getComputedStyle(document.querySelector("body"), null).getPropertyValue(
+  //     "background"
+  //   )
+  // );
 };

@@ -39,15 +39,34 @@ form {
 
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   height: 100vh;
 }
 
 .item {
+  display: flex;
+  justify-content: center;
   border-radius: 3px;
   width: 45vw;
+}
+
+a {
+  background-color: lightgrey;
+  box-shadow: 0 5px 0 grey;
+  color: white;
+  padding: 0.25em 1em;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: darkgray;
+}
+
+a:active {
+  box-shadow: none;
+  top: 5px;
 }
 
 p {
