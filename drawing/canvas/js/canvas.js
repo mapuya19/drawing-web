@@ -141,7 +141,7 @@ function desertDraw() {
     data[i + 2] = 255 - data[i + 2]; // blue
   }
 
-  context.putImageData(imageData, 0, 0);
+  ctx2.putImageData(imageData, 0, 0);
 }
 
 // when the whole page has loaded, including all dependent resources
