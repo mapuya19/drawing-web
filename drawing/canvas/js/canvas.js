@@ -131,17 +131,33 @@ function desertDraw() {
   ctx2.drawImage(desertPic, 0, 0, 600, 400);
 
   let imageData = ctx2.getImageData(0, 0, canvas2.width, canvas2.height);
-  let data = imageData.data;
-  console.log(imageData);
 
-  // invert pixels
-  for (let i = 0; i < data.length; i += 4) {
-    data[i + 0] = 255 - data[i + 0]; // red
-    data[i + 1] = 255 - data[i + 1]; // green
-    data[i + 2] = 255 - data[i + 2]; // blue
+  const updatedImageData = rgbSplit(imageData, {
+    rOffset: 20,
+    gOffset: -10,
+    bOffset: 10,
+  });
+
+  ctx2.putImageData(updatedImageData, 0, 0);
+}
+
+function rgbSplit(imageData, options) {
+  // destructure the offset values from options, default to 0
+  const { rOffset = 0, gOffset = 0, bOffset = 0 } = options;
+
+  // clone the pixel array from original imageData
+  const originalArray = imageData.data;
+  const newArray = new Uint8ClampedArray(originalArray);
+
+  // loop through every pixel and assign values to the offseted position
+  for (let i = 0; i < originalArray.length; i += 4) {
+    newArray[i + 0 + rOffset * 4] = originalArray[i + 0]; // 🔴
+    newArray[i + 1 + gOffset * 4] = originalArray[i + 1]; // 🟢
+    newArray[i + 2 + bOffset * 4] = originalArray[i + 2]; // 🔵
   }
 
-  ctx2.putImageData(imageData, 0, 0);
+  // return a new ImageData object
+  return new ImageData(newArray, imageData.width, imageData.height);
 }
 
 // when the whole page has loaded, including all dependent resources
