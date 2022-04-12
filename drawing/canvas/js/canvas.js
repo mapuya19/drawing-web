@@ -119,16 +119,16 @@ function mountainDraw() {
 const canvas2 = document.querySelector("#c2");
 const ctx2 = canvas2.getContext("2d");
 
-let desertPic = document.querySelector("img");
+let picture = document.querySelector("img");
 
-function desertSetup() {
+function pictureSetup() {
   canvas2.width = Math.floor(600 * scale);
   canvas2.height = Math.floor(400 * scale);
   ctx2.scale(scale, scale);
 }
 
-function desertDraw() {
-  ctx2.drawImage(desertPic, 0, 0, 600, 400);
+function pictureDraw() {
+  ctx2.drawImage(picture, 0, 0, 600, 400);
 
   let imageData = ctx2.getImageData(0, 0, canvas2.width, canvas2.height);
 
@@ -141,22 +141,19 @@ function desertDraw() {
   ctx2.putImageData(updatedImageData, 0, 0);
 }
 
+// Process Image
 function rgbSplit(imageData, options) {
-  // destructure the offset values from options, default to 0
   const { rOffset = 0, gOffset = 0, bOffset = 0 } = options;
 
-  // clone the pixel array from original imageData
   const originalArray = imageData.data;
   const newArray = new Uint8ClampedArray(originalArray);
 
-  // loop through every pixel and assign values to the offseted position
   for (let i = 0; i < originalArray.length; i += 4) {
     newArray[i + 0 + rOffset * 4] = originalArray[i + 0]; // 🔴
     newArray[i + 1 + gOffset * 4] = originalArray[i + 1]; // 🟢
     newArray[i + 2 + bOffset * 4] = originalArray[i + 2]; // 🔵
   }
 
-  // return a new ImageData object
   return new ImageData(newArray, imageData.width, imageData.height);
 }
 
@@ -164,6 +161,6 @@ function rgbSplit(imageData, options) {
 window.addEventListener("load", () => {
   mountainSetup();
   mountainDraw();
-  desertSetup();
-  desertDraw();
+  pictureSetup();
+  pictureDraw();
 });
