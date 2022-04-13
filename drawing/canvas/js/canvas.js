@@ -12,7 +12,7 @@ class Sun {
     this.ctx = canvas.getContext("2d");
     this.animation;
     this.size = 50;
-    this.increament = 0.01;
+    this.increment = 0.01;
     this.count = 0;
     this.color = ["#fdd835"];
     this.currentcolor = this.color;
@@ -20,7 +20,7 @@ class Sun {
   }
 
   draw() {
-    this.count = this.count + this.increament;
+    this.count = this.count + this.increment;
     this.ctx.beginPath();
     this.ctx.strokeStyle = this.currentcolor;
     this.ctx.lineWidth = 50;
@@ -127,6 +127,17 @@ function pictureSetup() {
   ctx2.scale(scale, scale);
 }
 
+function preShake() {
+  ctx2.save();
+  var dx = Math.random() * 3;
+  var dy = Math.random() * 3;
+  ctx2.translate(dx, dy);
+}
+
+function postShake() {
+  ctx2.restore();
+}
+
 function pictureDraw() {
   ctx2.drawImage(picture, 0, 0, 600, 400);
 
@@ -157,10 +168,19 @@ function rgbSplit(imageData, options) {
   return new ImageData(newArray, imageData.width, imageData.height);
 }
 
+function animate() {
+  window.requestAnimationFrame(animate);
+  ctx2.clearRect(0 ,0, canvas2.width, canvas2.height);
+  preShake();
+  pictureDraw();
+  postShake();
+}
+
 // when the whole page has loaded, including all dependent resources
 window.addEventListener("load", () => {
   mountainSetup();
   mountainDraw();
   pictureSetup();
   pictureDraw();
+  animate();
 });
