@@ -15,6 +15,7 @@ body {
   font-size: 15px;
   font-family: "Source Code Pro", sans-serif;
   overflow-x: hidden;
+  background: #1D1F20;
 }
 
 nav {
@@ -144,7 +145,7 @@ article h2:active {
 
 article h3 {
   display: inline-block;
-  color: #555;
+  color: #cfcfcf;
   font-style: italic;
   font-size: 0.8em;
   margin-left: 15px;
