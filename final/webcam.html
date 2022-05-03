@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/webcam.css" />
+    <title>mja610 - Final</title>
+  </head>
+
+  <body>
+    <div class="photobooth">
+      <div class="popup shadow">
+        <div class="bar">
+          <p>Webcam - Filter</p>
+          <button class="shadow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="8px"
+              height="7px"
+              viewBox="0 0 8 7"
+              fill-rule="evenodd"
+              stroke-linejoin="round"
+              stroke-miterlimit="2"
+            >
+              <path
+                d="M1 6V5h1V4h1V3h2v1h1v1h1v1h1v1H6V6H5V5H3v1H2v1H0V6h1zm0-4V1H0V0h2v1h1v1h2V1h1V0h2v1H7v1H6v1H2V2H1z"
+              />
+            </svg>
+          </button>
+        </div>
+        <section>
+          <canvas class="photo"></canvas>
+          <p>Is this okay?</p>
+        </section>
+        <div class="buttons">
+          <button class="shadow">
+            <img
+              src="assets/outline.svg"
+              alt=""
+              width="66.9"
+              height="15"
+            />
+            <p><u>Y</u>es</p>
+          </button>
+          <button class="shadow">
+            <img
+              src="assets/outline.svg"
+              alt=""
+              width="66.9"
+              height="15"
+            />
+            <p><u>N</u>o</p>
+          </button>
+          <button class="shadow">
+            <img
+              src="assets/outline.svg"
+              alt=""
+              width="66.9"
+              height="15"
+            />
+            <p>Cancel</p>
+          </button>
+        </div>
+      </div>
+
+      <video class="player"></video>
+    </div>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+    integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY="
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/webcam.js"></script>
+</html>

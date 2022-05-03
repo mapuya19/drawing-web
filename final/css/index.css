@@ -1,0 +1,321 @@
+/* bmrk general */
+html,
+body {
+  transition: opacity 0.5s;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  font-family: "Merriweather", serif;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+div {
+  -webkit-transition: ease 0.2s;
+  -moz-transition: ease 0.2s;
+  -o-transition: ease 0.2s;
+  transition: ease 0.2s;
+}
+
+.hover:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0 !important;
+  height: 0;
+}
+
+.flex-container {
+  display: flex;
+  margin: 0;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+video {
+  position: absolute;
+  mix-blend-mode: darken;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -15;
+  opacity: 75%;
+}
+
+.mousepad {
+  margin: 0;
+  height: 50vh;
+  width: 50vw;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: #ebc8aa;
+  border-radius: 25px;
+  box-shadow: 0 10px 15px -13px black;
+}
+
+@media (max-width: 1200px) {
+  .mousepad {
+    flex-direction: column;
+    height: 90vh;
+    width: 50vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .mousepad {
+    flex-direction: column;
+    height: 95vh;
+    width: 70vw;
+  }
+}
+
+.pr {
+  position: relative;
+}
+
+.pa {
+  position: absolute;
+}
+
+.ftl {
+  float: left;
+}
+
+.pad-lr-10 {
+  padding: 0 10px;
+}
+
+/* bmrk macbook */
+/* .mackbook {
+} */
+
+.mackbook .screen {
+  height: 150px;
+  width: 250px;
+  background-color: #3c5996;
+  border: 10px solid #151822;
+  border-radius: 5px;
+}
+
+.mackbook .base {
+  height: 185px;
+  width: 270px;
+  background-color: #e8e8eb;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 0 10px 15px -13px black;
+}
+
+.mackbook .base .connector {
+  background-color: #151822;
+  height: 8px;
+  width: 170px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 0 auto;
+}
+
+.mackbook .base .keypad {
+  background-color: #c2cbde;
+  height: 85px;
+  width: 250px;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.mackbook .base .keypad .key {
+  height: 17px;
+  border-radius: 4px;
+  background-color: #151822;
+  margin: 2px;
+}
+
+.mackbook .base .keypad .key1 {
+  width: 18px;
+}
+
+.mackbook .base .keypad .key2 {
+  width: 32px;
+}
+
+.mackbook .base .keypad .key3 {
+  width: 90px;
+}
+
+.mackbook .base .touchpad {
+  background-color: #c2cbde;
+  height: 59px;
+  width: 100px;
+  border-radius: 5px;
+  margin: -5px auto 5px auto;
+}
+
+/* bmrk phone */
+.phone {
+  background-color: #20232c;
+  height: 180px;
+  width: 90px;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px -13px black;
+}
+
+.phone .speaker {
+  background-color: #ededf0;
+  height: 3px;
+  width: 15px;
+  border-radius: 5px;
+  margin: 8px auto;
+}
+
+.phone .screen {
+  background-color: #262e41;
+  width: 80%;
+  margin: 0 auto;
+  height: 135px;
+}
+
+.phone .volume_rockers {
+  background-color: #20232c;
+  height: 24px;
+  width: 5px;
+  top: 25px;
+  left: -2px;
+  border-radius: 10px;
+}
+
+.phone .button {
+  height: 15px;
+  width: 15px;
+  background-color: #ededf0;
+  border-radius: 50%;
+  margin: 6px auto;
+}
+
+/* bmrk camera */
+.camera {
+  width: 205px;
+  height: 155px;
+  background-color: darkgrey;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px -13px black;
+  top: 35vh;
+  left: -200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lens {
+  width: 120px;
+  height: 120px;
+  background-color: #f5f5f5;
+  box-shadow: 0 8px 0 0 #c0c0c0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.inner-lens {
+  width: 105px;
+  height: 105px;
+  background-color: steelblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.inner-lens-2 {
+  border-top: 31px solid skyblue;
+  border-right: 31px solid skyblue;
+  border-bottom: 31px solid skyblue;
+  border-left: 31px solid lightskyblue;
+  border-radius: 50%;
+}
+
+/* bmrk player */
+#player {
+  width: 350px;
+  height: 50px;
+  position: relative;
+  margin: 0 auto;
+  top: 80px;
+}
+
+#player i {
+  position: absolute;
+  margin-top: -6px;
+  color: #666;
+}
+
+#player i.fa-volume-down {
+  margin-left: -8px;
+}
+
+#player i.fa-volume-up {
+  margin-right: -8px;
+  right: 0;
+}
+
+#volume {
+  position: absolute;
+  left: 24px;
+  margin: 0 auto;
+  height: 5px;
+  width: 300px;
+  background: #555;
+  border-radius: 15px;
+}
+
+#volume .ui-slider-range-min {
+  height: 5px;
+  width: 300px;
+  position: absolute;
+  background: #84d4d6;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+#volume .ui-slider-handle {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #fff;
+  position: absolute;
+  margin-left: -8px;
+  margin-top: -8px;
+  cursor: pointer;
+  outline: none;
+}

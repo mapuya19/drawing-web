@@ -1,0 +1,160 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #55aaaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.photobooth {
+  background:white;
+  margin: 2rem auto;
+  border-radius:2px;
+}
+
+.photo {
+  width:100%;
+}
+
+.player {
+  position: absolute;
+  top:20px;
+  right: 20px;
+  width:200px;
+  visibility: hidden;
+}
+
+.popup {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  background: #c2c6ca;
+  font-size: 12px;
+  -webkit-font-smoothing: none;
+  min-height: 40vh;
+  box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px #C2C6CA, inset -1px -1px #85898d, inset 2px 2px white;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.popup button {
+  background: #c2c6ca;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  outline: none;
+}
+
+.popup .shadow {
+  box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px white, inset -1px -1px #85898d;
+}
+
+.popup .bar {
+  display: flex;
+  flex-flow: row nowrap;
+  font-weight: bold;
+  justify-content: space-between;
+  width: calc(100% - 11px);
+  height: 13px;
+  color: white;
+  background: #00a;
+  padding: 2px 3px 3px;
+  margin: 3px 2px 1px 3px;
+}
+
+.popup .bar p {
+  margin: 0;
+}
+
+.popup .bar button {
+  width: 15px;
+  height: 13px;
+}
+
+.popup .bar button:active {
+  box-shadow: 0.5px 0.5px 0 0.5px white, inset 1px 1px black, inset -1px -1px #c2c6ca, inset 2px 2px #85898d;
+}
+
+.popup .bar button:active svg {
+  transform: translateX(1px) translateY(1px);
+}
+
+.popup .bar button svg {
+  margin: 3px 3px 3px 4px;
+}
+
+.popup .buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 1px 15px 14px 14px;
+}
+
+.popup .buttons button {
+  width: 74px;
+  height: 22px;
+  display: grid;
+}
+
+.popup .buttons button:not(:last-child) {
+  margin-right: 7px;
+}
+
+.popup .buttons button p {
+  font-size: 12px;
+  margin: auto;
+}
+
+.popup .buttons button img {
+  margin: 4px 3px 3px 4px;
+  display: none;
+}
+
+.popup .buttons button p, .popup .buttons button img {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.popup .buttons button:focus {
+  outline: none;
+  box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px black, inset -1px -1px black, inset 2px 2px white, inset -2px -2px #85898d;
+}
+
+.popup .buttons button:focus img {
+  display: block;
+}
+
+.popup .buttons button:active {
+  box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px black, inset -1px -1px #85898d, inset 2px 2px #85898d;
+  outline: none;
+}
+
+.popup .buttons button:active p, .popup .buttons button:active img {
+  transform: translateX(1px) translateY(1px);
+}
+
