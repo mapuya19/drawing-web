@@ -1,3 +1,4 @@
+/* general */
 body {
   display: flex;
   flex-direction: column;
@@ -8,6 +9,7 @@ body {
   height: 80vh;
 }
 
+/* fade in */
 body {
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
@@ -23,6 +25,7 @@ body {
   }
 }
 
+/* return button */
 .btn {
   box-sizing: border-box;
   -webkit-appearance: none;
@@ -60,6 +63,7 @@ body {
   background-position: 0;
 }
 
+/* computer */
 .wrapper {
   display: flex;
   align-items: center;
@@ -76,6 +80,7 @@ body {
   width: 50vw;
 }
 
+/* typing */
 .typed {
   position: absolute;
   top: 18%;
@@ -107,6 +112,7 @@ body {
   }
 }
 
+/* volume slider */
 #player {
   width: 350px;
   height: 50px;

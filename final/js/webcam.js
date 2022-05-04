@@ -1,3 +1,4 @@
+// webcam
 const video = document.querySelector(".player");
 const canvas = document.querySelector(".photo");
 const ctx = canvas.getContext("2d");
@@ -47,8 +48,8 @@ function rgbSplit(pixels) {
 
 getVideo();
 video.addEventListener("canplay", paintToCanvas);
-filterBtn.map((node) => node.addEventListener("click", paintToCanvas));
 
+// volume slider
 $("#volume").slider({
   min: 0,
   max: 100,
