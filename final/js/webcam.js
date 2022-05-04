@@ -1,5 +1,3 @@
-console.clear();
-
 const video = document.querySelector(".player");
 const canvas = document.querySelector(".photo");
 const ctx = canvas.getContext("2d");
@@ -12,7 +10,6 @@ function getVideo() {
   navigator.mediaDevices
     .getUserMedia({ video: true, audio: false })
     .then((localMediaStream) => {
-      console.log(localMediaStream);
       video.srcObject = localMediaStream;
       video.play();
     })
@@ -22,8 +19,6 @@ function getVideo() {
 function paintToCanvas() {
   const width = video.videoWidth;
   const height = video.videoHeight;
-  let filterType = this.dataset.filter || 0;
-  console.log(this.dataset, "hi", filterType);
 
   canvas.width = width;
   canvas.height = height;
@@ -53,3 +48,31 @@ function rgbSplit(pixels) {
 getVideo();
 video.addEventListener("canplay", paintToCanvas);
 filterBtn.map((node) => node.addEventListener("click", paintToCanvas));
+
+$("#volume").slider({
+  min: 0,
+  max: 100,
+  value: 0,
+  range: "min",
+  slide: function (event, ui) {
+    setVolume(ui.value / 100);
+  },
+});
+
+var myMedia = document.createElement("audio");
+$("#player").append(myMedia);
+myMedia.id = "myMedia";
+
+playAudio("assets/zoom.mp3", 0);
+
+function playAudio(fileName, myVolume) {
+  myMedia.src = fileName;
+  myMedia.setAttribute("loop", "loop");
+  setVolume(myVolume);
+  myMedia.play();
+}
+
+function setVolume(myVolume) {
+  var myMedia = document.getElementById("myMedia");
+  myMedia.volume = myVolume;
+}

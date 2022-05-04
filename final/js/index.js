@@ -37,9 +37,9 @@ accessData = async (lat, lon) => {
 weatherData = (response) => {
   let main = response.weather[0].main;
   // main = "rain";
-  // console.log("This is the main: " + main);
+  console.log("This is the weather: " + main);
 
-  if (main === "rain") {
+  if (main === "Rain" || main === "Drizzle") {
     playAudio("assets/rain.mp3", 0);
   } else {
     playAudio("assets/fly.mp3", 0);

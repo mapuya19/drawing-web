@@ -75,9 +75,9 @@ video {
   justify-content: space-around;
   align-items: center;
 
-  background-color: #ebc8aa;
+  /* background-color: #ebc8aa; */
   border-radius: 25px;
-  box-shadow: 0 10px 15px -13px black;
+  box-shadow: 0 0 10px black;
 }
 
 @media (max-width: 1200px) {
@@ -113,9 +113,6 @@ video {
 }
 
 /* bmrk macbook */
-/* .mackbook {
-} */
-
 .mackbook .screen {
   height: 150px;
   width: 250px;
