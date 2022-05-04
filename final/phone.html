@@ -10,15 +10,66 @@
       <div class="window">
         <div class="sp-panel-set">
           <div class="sp-panel">
-            <div class="img one"><img src="assets/insta.PNG" /></div>
+            <div class="img one">
+              <svg viewbox="0 0 1170 2532">
+                <filter id="pixelate" x="0" y="0">
+                  <feFlood id="dot" x="0" y="0" height="1" width="1" />
+                  <feComposite id="spacing" width="20" height="20" />
+                  <feTile result="a" />
+                  <feComposite in="SourceGraphic" in2="a" operator="in" />
+                  <feMorphology id="size" operator="dilate" radius="10" />
+                </filter>
+
+                <image
+                  preserveAspectRatio="none"
+                  x="0"
+                  y="0"
+                  href="assets/insta.PNG"
+                />
+              </svg>
+            </div>
           </div>
 
           <div class="sp-panel">
-            <div class="img two"><img src="assets/twit.PNG" /></div>
+            <div class="img two">
+              <svg viewbox="0 0 1170 2532">
+                <filter id="pixelate2" x="0" y="0">
+                  <feFlood id="dot2" x="0" y="0" height="1" width="1" />
+                  <feComposite id="spacing2" width="20" height="20" />
+                  <feTile result="a" />
+                  <feComposite in="SourceGraphic" in2="a" operator="in" />
+                  <feMorphology id="size2" operator="dilate" radius="10" />
+                </filter>
+
+                <image
+                  preserveAspectRatio="none"
+                  x="0"
+                  y="0"
+                  href="assets/twit.PNG"
+                />
+              </svg>
+            </div>
           </div>
 
           <div class="sp-panel">
-            <div class="img three"><img src="assets/reddit.PNG" /></div>
+            <div class="img three">
+              <svg viewbox="0 0 1170 2532">
+                <filter id="pixelate3" x="0" y="0">
+                  <feFlood id="dot3" x="0" y="0" height="1" width="1" />
+                  <feComposite id="spacing3" width="20" height="20" />
+                  <feTile result="a" />
+                  <feComposite in="SourceGraphic" in2="a" operator="in" />
+                  <feMorphology id="size3" operator="dilate" radius="10" />
+                </filter>
+
+                <image
+                  preserveAspectRatio="none"
+                  x="0"
+                  y="0"
+                  href="assets/reddit.PNG"
+                />
+              </svg>
+            </div>
           </div>
         </div>
 
@@ -35,13 +86,13 @@
         </div>
         <i class="fa fa-volume-up"></i>
       </div>
-      
+
       <form action="index.html">
         <button class="btn fourth">Return</button>
       </form>
     </div>
   </body>
-
+  <!-- js and jquery -->
   <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
